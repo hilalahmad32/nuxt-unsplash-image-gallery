@@ -61,7 +61,7 @@ export default {
       this.isloading = true;
 
       const images = await this.$axios.get(
-        "https://api.unsplash.com/photos?client_id=net7NdcVyXVCFXaEn9obXSTUWGy6OXVX69zyFmfJ2gA"
+        "https://api.unsplash.com/photos?client_id=?"
       );
       this.images = images.data;
       this.isloading = false;
@@ -70,7 +70,7 @@ export default {
       this.isloading = true;
 
       const images = await this.$axios.get(
-        `https://api.unsplash.com/search?query=${this.search}&client_id=net7NdcVyXVCFXaEn9obXSTUWGy6OXVX69zyFmfJ2gA`
+        `https://api.unsplash.com/search?query=${this.search}&client_id=?`
       );
       this.searchImage = images.data.photos.results;
       this.search = "";
